@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+from glob import glob
+import os
 
 package_name = 'rehab_robot_bayes_ros2'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
     ],
     install_requires=[
         'setuptools',         # Required for Python package installation
@@ -31,7 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             'env_node = rehab_robot_bayes_ros2.env_node:main',
-            'bayes_node = rehab_robot_bayes_ros2.bayes_node:main',
+            'bayes_opt_node = rehab_robot_bayes_ros2.bayes_opt_node:main',
         ],
     },
 )

@@ -1,0 +1,24 @@
+running egg_info
+writing build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/PKG-INFO
+writing dependency_links to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/dependency_links.txt
+writing entry points to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/entry_points.txt
+writing requirements to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/requires.txt
+writing top-level names to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/top_level.txt
+reading manifest file 'build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/SOURCES.txt'
+writing manifest file 'build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/SOURCES.txt'
+running build
+running build_py
+copying rehab_robot_bayes_ros2/bayes_opt_node.py -> /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build/lib/rehab_robot_bayes_ros2
+running install
+running install_lib
+copying /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build/lib/rehab_robot_bayes_ros2/bayes_opt_node.py -> /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2
+byte-compiling /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/bayes_opt_node.py to bayes_opt_node.cpython-310.pyc
+running install_data
+copying launch/simulation_launch.py -> /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/share/rehab_robot_bayes_ros2/launch
+running install_egg_info
+removing '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info
+running install_scripts
+Installing bayes_opt_node script to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2
+Installing env_node script to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2
+writing list of installed files to '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/install.log'

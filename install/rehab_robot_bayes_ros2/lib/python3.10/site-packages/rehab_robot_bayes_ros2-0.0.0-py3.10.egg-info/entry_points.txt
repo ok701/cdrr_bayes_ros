@@ -1,0 +1,4 @@
+[console_scripts]
+bayes_opt_node = rehab_robot_bayes_ros2.bayes_opt_node:main
+env_node = rehab_robot_bayes_ros2.env_node:main
+

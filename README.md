@@ -1,4 +1,4 @@
-# Rehablitation Robot Bayesian Optimization ROS2 Package
+# Rehablitation Robot Bayesian Optimization ROS 2 Package
 
 This package demonstrates Bayesian optimization for a rehabilitation robot in ROS 2, designed for deployment in real systems. It aims to find the optimal rehabilitation assistive and resistive forces tailored for patients.
 
