@@ -51,27 +51,27 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        simulation_ns: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mass_marker
+        Value: /mes_marker
       Value: true
     - Class: rviz_default_plugins/Marker
       Enabled: true
       Name: Marker
       Namespaces:
-        simulation_ns: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /xref_marker
+        Value: /ref_marker
       Value: true
   Enabled: true
   Global Options:
@@ -119,7 +119,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.5528829097747803
+      Distance: 10
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -155,5 +155,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 2018
-  Y: 67
+  X: 28
+  Y: 28

@@ -35,6 +35,7 @@ setup(
         'console_scripts': [
             'env_node = rehab_robot_bayes_ros2.env_node:main',
             'bayes_opt_node = rehab_robot_bayes_ros2.bayes_opt_node:main',
+            'viz_node = rehab_robot_bayes_ros2.viz_node:main',
         ],
     },
 )

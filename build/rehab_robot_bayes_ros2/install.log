@@ -1,11 +1,14 @@
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/env_node.py
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/__init__.py
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/bayes_opt_node.py
+/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/viz_node.py
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/__pycache__/env_node.cpython-310.pyc
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/__pycache__/__init__.cpython-310.pyc
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/__pycache__/bayes_opt_node.cpython-310.pyc
+/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/__pycache__/viz_node.cpython-310.pyc
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/share/ament_index/resource_index/packages/rehab_robot_bayes_ros2
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/share/rehab_robot_bayes_ros2/package.xml
+/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/share/rehab_robot_bayes_ros2/launch/deployment_launch.py
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/share/rehab_robot_bayes_ros2/launch/simulation_launch.py
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info/entry_points.txt
@@ -16,3 +19,4 @@
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info/zip-safe
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2/bayes_opt_node
 /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2/env_node
+/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2/viz_node
