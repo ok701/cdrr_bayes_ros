@@ -8,6 +8,7 @@ def generate_launch_description():
     # Example of how to get the path to an RViz config file if needed
     # pkg_share_dir = get_package_share_directory('rehab_robot_bayes_ros2')
     # rviz_config_file = os.path.join(pkg_share_dir, 'config', 'simulation_config.rviz')
+    rviz_config_path = '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/config/simulation_config.rviz'
 
     return LaunchDescription([
         # 1) Launch the Bayesian Optimization node
@@ -39,7 +40,7 @@ def generate_launch_description():
             executable='rviz2',
             name='rviz',
             arguments=[
-                '-d', 'config/simulation_config.rviz'
+                '-d', rviz_config_path
                 # or '-d', rviz_config_file if using the path above
             ],
             output='screen',

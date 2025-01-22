@@ -6,6 +6,13 @@ import os
 
 def generate_launch_description():
 
+    # Get the package share directory for rehab_robot_bayes_ros2
+    # pkg_share_dir = get_package_share_directory('rehab_robot_bayes_ros2')
+    # pkg_dir = os.path.abspath(os.path.join(pkg_share_dir, "..", "..", "..", ".."))
+    # rviz_config_path = os.path.join(pkg_dir, 'config', 'simulation_config.rviz')
+    rviz_config_path = '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/config/simulation_config.rviz'
+
+
     return LaunchDescription([
         # Launch bayes_opt_node with required arguments
         Node(
@@ -39,7 +46,7 @@ def generate_launch_description():
             #     '-d', 'install/rehab_robot_bayes_ros2/share/rehab_robot_bayes_ros2/config/simulation_config.rviz'
             # ],
             arguments=[
-                '-d', 'config/simulation_config.rviz'
+                '-d', rviz_config_path
             ],
             output='screen',
         ),

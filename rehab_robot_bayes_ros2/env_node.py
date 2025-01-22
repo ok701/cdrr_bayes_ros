@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
+from std_msgs.msg import Float32MultiArray
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Vector3
 
@@ -24,7 +23,7 @@ class LinearEnvSimVizNode(Node):
         self.frame_id = frame_id
         self.Kp = 0.1          # "Human" spring gain
 
-        # ROS subscriptions and publications
+        # ROS subscriptions
         self.trigger_sub = self.create_subscription(
             Int32, '/trigger', self.trigger_callback, 10
         )
@@ -33,20 +32,30 @@ class LinearEnvSimVizNode(Node):
             Int32, '/ref_force', self.ref_force_callback, 10
         )
 
+        self.score_sub = self.create_subscription(
+            Float32MultiArray, '/score', self.score_callback, 10
+        )
+
+        # ROS publications
         self.mes_pos_pub = self.create_publisher(Int32, '/mes_pos', 10)
         self.ref_pos_pub = self.create_publisher(Int32, '/ref_pos', 10)
 
         # For RViz visualization
         self.mes_marker_pub = self.create_publisher(Marker, '/mes_marker', 10)
         self.ref_marker_pub = self.create_publisher(Marker, '/ref_marker', 10)
+        self.text_marker_pub = self.create_publisher(Marker, '/text_marker', 10)
 
         # Internal state
         self.trigger_state = 0
         self.simulation_active = False
-        self.cable_force = 0.0
         self.x = 0.0
         self.x_dot = 0.0
         self.time_sim = 0.0
+
+        # Store force and scores so we can display them together
+        self.cable_force = 0.0
+        self.strength_score = 0.0
+        self.accuracy_score = 0.0
 
         self.reset_simulation()
         self.timer = self.create_timer(self.dt, self.update_and_visualize)
@@ -70,6 +79,7 @@ class LinearEnvSimVizNode(Node):
         elif new_trigger == 0 and self.trigger_state == 1:
             self.get_logger().info("Trigger 1->0: Resetting to start position.")
             self.reset_simulation(go_to_start=True)
+            # Publish markers to show positions at the reset state
             self.publish_marker(self.mes_marker_pub, self.x / 1000.0, 0.05, (1.0, 0.0, 0.0))
             self.publish_marker(self.ref_marker_pub, self.x / 1000.0, 0.05, (0.0, 1.0, 0.0))
 
@@ -78,6 +88,22 @@ class LinearEnvSimVizNode(Node):
     def ref_force_callback(self, msg: Int32):
         self.cable_force = float(msg.data)
         self.get_logger().info(f"Updated cable force to {self.cable_force:.2f} N")
+        # Update text marker to show new force + existing scores
+        self.update_text_marker()
+
+    def score_callback(self, msg: Float32MultiArray):
+        """
+        Called whenever new scores arrive. We store them and then update
+        the single text marker (force + strength + accuracy).
+        """
+        if len(msg.data) >= 2:
+            self.strength_score = msg.data[0]
+            self.accuracy_score = msg.data[1]
+            # self.get_logger().info(
+            #     f"Received new scores. strength={self.strength_score:.2f}, accuracy={self.accuracy_score:.2f}"
+            # )
+        # Update text marker so it now includes the updated scores
+        self.update_text_marker()
 
     def update_and_visualize(self):
         if not self.simulation_active:
@@ -151,6 +177,54 @@ class LinearEnvSimVizNode(Node):
         tau = t / self.T
         return self.L * (10.0 * tau**3 - 15.0 * tau**4 + 6.0 * tau**5)
 
+    def update_text_marker(self):
+        """
+        Publishes a single text marker containing:
+          - NEXT FORCE
+          - STRENGTH
+          - ACCURACY
+        This is called whenever 'cable_force' or 'strength_score' or 'accuracy_score' changes.
+        """
+        # Build the text
+        text_str = (
+            f"NEXTFORCE:  {self.cable_force:.2f} N\n"
+            f"STRENGTH:   {self.strength_score:.2f}\n"
+            f"ACCURACY:   {self.accuracy_score:.2f}"
+        )
+        self.publish_text_marker(
+            text=text_str,
+            x_pos=0.0,
+            y_pos=0.0,
+            z_pos=0.2,
+            scale=0.05,
+            color=(1.0, 1.0, 1.0)
+        )
+
+    def publish_text_marker(self, text, x_pos, y_pos, z_pos, scale, color=(1.0, 1.0, 1.0)):
+        marker = Marker()
+        marker.header.frame_id = self.frame_id
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ref_force_text"
+        marker.id = 0
+        marker.type = Marker.TEXT_VIEW_FACING
+        marker.action = Marker.ADD
+
+        marker.pose.position.x = float(x_pos)
+        marker.pose.position.y = float(y_pos)
+        marker.pose.position.z = float(z_pos)
+        marker.pose.orientation.w = 1.0
+
+        marker.scale = Vector3(x=scale, y=scale, z=scale)
+
+        marker.color.r = color[0]
+        marker.color.g = color[1]
+        marker.color.b = color[2]
+        marker.color.a = 1.0
+
+        marker.text = text
+
+        self.text_marker_pub.publish(marker)
+
 
 def main(args=None):
     parser = argparse.ArgumentParser(description="1D Linear Environment with Visualization in RViz")
@@ -177,3 +251,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+

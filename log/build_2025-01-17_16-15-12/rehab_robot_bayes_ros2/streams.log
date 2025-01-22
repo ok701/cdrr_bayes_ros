@@ -1,0 +1,26 @@
+[0.311s] Invoking command in '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2': PYTHONPATH=/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rehab_robot_bayes_ros2 build --build-base /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build install --record /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/install.log --single-version-externally-managed install_data
+[0.436s] running egg_info
+[0.436s] writing build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/PKG-INFO
+[0.436s] writing dependency_links to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/dependency_links.txt
+[0.436s] writing entry points to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/entry_points.txt
+[0.436s] writing requirements to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/requires.txt
+[0.436s] writing top-level names to build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/top_level.txt
+[0.437s] reading manifest file 'build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/SOURCES.txt'
+[0.438s] writing manifest file 'build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info/SOURCES.txt'
+[0.438s] running build
+[0.438s] running build_py
+[0.438s] copying rehab_robot_bayes_ros2/bayes_opt_node.py -> /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build/lib/rehab_robot_bayes_ros2
+[0.438s] running install
+[0.438s] running install_lib
+[0.439s] copying /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build/lib/rehab_robot_bayes_ros2/bayes_opt_node.py -> /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2
+[0.439s] byte-compiling /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2/bayes_opt_node.py to bayes_opt_node.cpython-310.pyc
+[0.440s] running install_data
+[0.440s] running install_egg_info
+[0.441s] removing '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info' (and everything under it)
+[0.441s] Copying build/rehab_robot_bayes_ros2/rehab_robot_bayes_ros2.egg-info to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages/rehab_robot_bayes_ros2-0.0.0-py3.10.egg-info
+[0.442s] running install_scripts
+[0.453s] Installing bayes_opt_node script to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2
+[0.453s] Installing env_node script to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2
+[0.453s] Installing viz_node script to /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/rehab_robot_bayes_ros2
+[0.453s] writing list of installed files to '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/install.log'
+[0.466s] Invoked command in '/home/awear/ros2_ws/src/rehab_robot_bayes_ros2' returned '0': PYTHONPATH=/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/awear/ros2_ws/src/rehab_robot_bayes_ros2/install/rehab_robot_bayes_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/rehab_robot_bayes_ros2 build --build-base /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/build install --record /home/awear/ros2_ws/src/rehab_robot_bayes_ros2/build/rehab_robot_bayes_ros2/install.log --single-version-externally-managed install_data
