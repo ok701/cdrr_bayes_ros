@@ -22,7 +22,7 @@ ros2 topic pub -r 1 /trigger std_msgs/msg/Int32 "data: 1"
 
 
 ## Usage
-<img src="./assets/visual.png" alt="Visualization" width="400" />
+<img src="./assets/visual.png" alt="Visualization" width="500" />
 
 You can either deploy or simulate using:
 ```bash
@@ -32,4 +32,4 @@ ros2 launch rehab_robot_bayes_ros2 simulation_launch.py
 
 After several repetiton of each cycle, Beyesian optimization is conducted.
 
-<img src="./assets/bayes.png" alt="Bayesian Optimization" width="400" />
+<img src="./assets/bayes.png" alt="Bayesian Optimization" width="500" />
