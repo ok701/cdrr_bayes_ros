@@ -1,4 +1,4 @@
-# Bayesian Optimization ROS 2 Package<br>for Rehablitation Robot 
+# Constant Force Optimization for CDRR ROS 2
 
 This package demonstrates Bayesian optimization for a rehabilitation robot in ROS 2, designed for deployment in real systems. It aims to find the optimal constant rehabilitation assistive and resistive forces tailored for patients.
 
