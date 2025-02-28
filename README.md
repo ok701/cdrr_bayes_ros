@@ -29,6 +29,6 @@ ros2 launch rehab_robot_bayes_ros2 deployment_launch.py
 ros2 launch rehab_robot_bayes_ros2 simulation_launch.py
 ```
 <div style="display: flex; align-items: center;">
-  <img src="./assets/visual.png" alt="Visualization" style="width: 390px; margin-right: 20px;" />
-  <img src="./assets/bayes.png" alt="Bayesian Optimization" style="width: 210px;" />
+  <img src="./assets/visual.png" alt="Visualization" style="width: 500px; margin-right: 20px;" />
+  <img src="./assets/bayes.png" alt="Bayesian Optimization" style="width: 270px;" />
 </div>
