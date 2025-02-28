@@ -5,21 +5,30 @@ This package demonstrates Bayesian optimization for a rehabilitation robot in RO
 ## Deployment Constraints
 The high-level control logic is implemented in Python within a ROS 2 framework, while LabVIEW is used for hardware interfacing and the graphical user interface. This means that the system cannot be deployed as a standalone Python application. If you require LabVIEW integration, you can use the `cdrr_control` repository. Alternatively, if you prefer a different setup, you are free to create hardware settings tailored to your needs.
 
-### Main Topics
-[rosgraph_deploy](./assets/rosgraph_deploy.png)
-[rosgraph_sim](./assets/rosgraph_sim.png)
+### Rosgraph for Deployment
+![rosgraph_deploy](./assets/rosgraph_deploy.png)
+- `/mes_pos`, `/ref_pos`, `/trigger` are sent by LabVIEW (or other sources). 
+- `/ref_force` is the computed optimal constant force output.
 
-- `/mes_pos`
-- `/ref_pos`
-- `/ref_force`
-
-
-### Usage
-To simulate uzing RViz:
+### Rosgraph for Simulation
+![rosgraph_sim](./assets/rosgraph_sim.png)
+- `/mes_pos`, `/ref_pos` are computed in a virtual spring and damper environment.
+- `/trigger` is still needed. You can use the following commands as an alternative:
 ```bash
-roslaunch 
+ros2 topic pub -r 1 /trigger std_msgs/msg/Int32 "data: 0"
+ros2 topic pub -r 1 /trigger std_msgs/msg/Int32 "data: 1"
 ```
-[visual](./assets/visual.png)
 
 
-[bayes](./assets/bayes.png)
+
+## Usage
+After several repetiton of each cycle, Beyesian optimization is conducted.
+You can either deploy or simulate using:
+```bash
+ros2 launch rehab_robot_bayes_ros2 deployment_launch.py
+ros2 launch rehab_robot_bayes_ros2 simulation_launch.py
+```
+<div style="display: flex; align-items: center;">
+  <img src="./assets/visual.png" alt="Visualization" style="width: 390px; margin-right: 20px;" />
+  <img src="./assets/bayes.png" alt="Bayesian Optimization" style="width: 210px;" />
+</div>
