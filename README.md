@@ -28,7 +28,7 @@ You can either deploy or simulate using:
 ros2 launch rehab_robot_bayes_ros2 deployment_launch.py
 ros2 launch rehab_robot_bayes_ros2 simulation_launch.py
 ```
-<div style="display: flex;">
+<div style="display: flex; align-items: flex-start;">
   <img src="./assets/visual.png" alt="Visualization" style="width: 400px; margin-right: 30px;" />
   <img src="./assets/bayes.png" alt="Bayesian Optimization" style="width: 400px;" />
 </div>
